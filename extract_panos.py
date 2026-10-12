@@ -5,6 +5,13 @@ import geopandas as gpd
 from dotenv import load_dotenv
 from streetview import search_panoramas, get_panorama
 
+
+
+# Switch to the alternative Overpass mirror and increase the timeout
+# ox.settings.overpass_endpoint = "https://lz4.overpass-api.de/api/interpreter" # Optional server mirror for Overpass API
+ox.settings.overpass_endpoint = "https://overpass.kumi.systems/api/interpreter" # Another optional server mirror for Overpass API
+ox.settings.timeout = 300
+
 # Load API key securely
 load_dotenv()
 api_key = os.getenv("GOOGLE_MAPS_API_KEY")

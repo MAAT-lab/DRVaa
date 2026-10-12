@@ -8,3 +8,6 @@ __pycache__/
 # Ignore local image downloads
 streetview_panoramas/
 *.jpg
+
+# ignore cache files from the streetview library
+cache/
