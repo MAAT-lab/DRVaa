@@ -11,6 +11,21 @@ The core contribution of DRVA is its critical challenge to purely geometric navi
 
 
 ## Setting up Python
+Within a terminal:
 Create the environment: python -m venv venv
 Activate the project: .\venv\Scripts\activate
 Install dependencies: pip install osmnx geopandas shapely streetview python-dotenv
+
+
+## Setting up LLM
+Within a terminal:
+Run: ollama run llava
+Type the following to exit once it downloads: /bye 
+
+Install the Pythong bindings for Ollama: pip install ollama
+
+Before running the main code (score_panoramas.py) ensure you have pulled the model by running the LLM in your terminal: ollama pull qwen2.5-vl
+
+Other LLM option: ollama pull llava
+Other LLM option: Ollama pull llama3.2-vision
+
