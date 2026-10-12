@@ -17,15 +17,15 @@ Within a terminal, do the following
 3. Install dependencies: ```pip install osmnx geopandas shapely streetview python-dotenv```
 
 
-## Setting up the vision LLM model
+## Setting up the Vision LLM Model
 Within a terminal, download and install Ollama (ollama.com).
-1. Run: ```ollama run qwen2.5-vl```
-2. Type the following to exit once it downloads: ```/bye```
+1. Install the Python bindings for Ollama:
+   `pip install ollama`
+2. Download the model:
+   `ollama pull qwen2.5vl`
+   *(Optional alternatives: `ollama pull llava` or `ollama pull llama3.2-vision`)*
+3. Run the analysis script:
+   `python score_panoramas.py`
 
-3. Install the Python bindings for Ollama: ```pip install ollama```
 
-4. Before running the main code (score_panoramas.py) ensure you have pulled the model by running the LLM in your terminal: ```ollama run qwen2.5vl```
-
-5. Other LLM option: ```ollama pull llava```
-6. Other LLM option: ```ollama pull llama3.2-vision```
 
