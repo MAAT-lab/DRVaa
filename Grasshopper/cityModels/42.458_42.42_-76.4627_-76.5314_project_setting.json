@@ -1,0 +1,25 @@
+{
+  "Folder": "C:\\Users\\l03063058\\Desktop\\Github\\DRVaa\\Grasshopper\\cityModels",
+  "FileNameStr": "42.458_42.42_-76.4627_-76.5314",
+  "Granularity": "Block",
+  "CoordinateReference": {
+    "Utm": "18T",
+    "BottomLeftUtm": {
+      "Item1": 374009.1276144666,
+      "Item2": 4697545.9828338325
+    },
+    "BottomRightUtm": {
+      "Item1": 379661.3082982366,
+      "Item2": 4697446.339128782
+    }
+  },
+  "Top": 42.458,
+  "Bottom": 42.42,
+  "Left": -76.5314,
+  "Right": -76.4627,
+  "OsmFilePath": "C:\\Users\\l03063058\\Desktop\\Github\\DRVaa\\Grasshopper\\cityModels\\42.458_42.42_-76.4627_-76.5314.osm.pbf",
+  "BlockFilePath": "",
+  "ElevationFilePath": "",
+  "OvertureFilePath": "",
+  "Layers": []
+}
