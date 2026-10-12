@@ -1,0 +1,10 @@
+# Ignore environment variables
+.env
+
+# Ignore python virtual environment & cache
+venv/
+__pycache__/
+
+# Ignore local image downloads
+streetview_panoramas/
+*.jpg

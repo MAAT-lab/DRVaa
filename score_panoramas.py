@@ -49,7 +49,7 @@ for index, row in df.iterrows():
     try:
         # Send the 360° panorama to the MLLM with a structured prompt requesting a JSON evaluation[cite: 3]
         response = ollama.chat(
-            model='qwen2.5-vl', # Options: 'llava', 'llama3.2-vision', 'quen2.5-v1' 
+            model='qwen2.5vl', # Options: 'llava', 'llama3.2-vision', 'quen2.5v1' 
             messages=[{
                 'role': 'user',
                 'content': system_prompt,

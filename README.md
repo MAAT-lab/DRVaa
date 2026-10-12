@@ -22,9 +22,9 @@ Within a terminal, download and install Ollama (ollama.com).
 1. Run: ```ollama run qwen2.5-vl```
 2. Type the following to exit once it downloads: ```/bye```
 
-3. Install the Pythong bindings for Ollama: ```pip install ollama```
+3. Install the Python bindings for Ollama: ```pip install ollama```
 
-4. Before running the main code (score_panoramas.py) ensure you have pulled the model by running the LLM in your terminal: ```ollama pull qwen2.5-vl```
+4. Before running the main code (score_panoramas.py) ensure you have pulled the model by running the LLM in your terminal: ```ollama run qwen2.5vl```
 
 5. Other LLM option: ```ollama pull llava```
 6. Other LLM option: ```ollama pull llama3.2-vision```
