@@ -7,20 +7,34 @@ from streetview import search_panoramas, get_panorama
 
 
 
-# Switch to the alternative Overpass mirror and increase the timeout
-# ox.settings.overpass_endpoint = "https://lz4.overpass-api.de/api/interpreter" # Optional server mirror for Overpass API
-ox.settings.overpass_endpoint = "https://overpass.kumi.systems/api/interpreter" # Another optional server mirror for Overpass API
+# Switch to the official high-performance lz4 mirror (compatible with OSMnx status checks)
+# ox.settings.overpass_url = "https://lz4.overpass-api.de/api"
+ox.settings.overpass_url = "https://overpass.openstreetmap.fr/api"
+
+# Increase BOTH the Overpass server timeout and the local Python read timeout
 ox.settings.timeout = 300
+ox.settings.requests_timeout = 300
 
 # Load API key securely
 load_dotenv()
 api_key = os.getenv("GOOGLE_MAPS_API_KEY")
 
 # Bounding box coordinates
-max_lat = 20.71971   # North
-min_lat = 20.69318   # South
-max_lon = -103.44031 # East
-min_lon = -103.46190 # West
+# max_lat = 20.71971   # North
+# min_lat = 20.69318   # South
+# max_lon = -103.44031 # East
+# min_lon = -103.46190 # West
+
+# max_lat = 20.71879   # North
+# min_lat = 20.70630   # South
+# max_lon = -103.44576 # East
+# min_lon = -103.45881 # West
+
+# Micro bounding box for testing (approx 300x300 meters)
+max_lat = 20.70100   # North
+min_lat = 20.69900   # South
+max_lon = -103.45000 # East
+min_lon = -103.45200 # West
 
 # Fetch street network from bounding box
 graph = ox.graph_from_bbox(bbox=(max_lat, min_lat, max_lon, min_lon), network_type="walk")
@@ -34,9 +48,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 records = []
 
-
 for idx, row in edges.iloc[:10].iterrows(): # Access to first 10 edges  
-# for idx, row in edges.iterrows(): #Full access to all edges
     # Format a unique segment ID from OSM edge indices (u, v, key)
     segment_id = f"{idx[0]}_{idx[1]}_{idx[2]}" if isinstance(idx, tuple) else str(idx)
 
