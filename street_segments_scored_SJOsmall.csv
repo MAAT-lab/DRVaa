@@ -1,4 +1,4 @@
-segment_id,latitude,longitude,street_name,pano_id,image_file,acoustic_comfort,thermal_comfort,somatic_stress,social_vitality,territorial_safety,olfactory_resonance
+segment_id,latitude,longitude,street,pano_id,image_file,acoustic_comfort,thermal_comfort,somatic_stress,social_vitality,territorial_safety,olfactory_resonance
 12529213679_12529213680_0,20.71647615,-103.4555619,Unnamed Street,eCqypDX8DNq2Gw41S1mtPg,eCqypDX8DNq2Gw41S1mtPg.jpg,70,80,60,50,85,75
 12529213680_12529213679_0,20.71647615,-103.4555619,Unnamed Street,eCqypDX8DNq2Gw41S1mtPg,eCqypDX8DNq2Gw41S1mtPg.jpg,70,80,60,50,85,75
 12529213680_12529213681_0,20.71670638389123,-103.45560419177228,Unnamed Street,gpYlNUIn5HZwIE0VMrpF2w,gpYlNUIn5HZwIE0VMrpF2w.jpg,70,80,60,75,85,70

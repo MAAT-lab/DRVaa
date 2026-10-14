@@ -90,7 +90,7 @@ for idx, row in edges.iterrows(): # Full run with all edges
                     "segment_id": segment_id,
                     "latitude": lat,
                     "longitude": lon,
-                    "street_name": street_name,
+                    "street": street_name,
                     "pano_id": pano_id,
                     "image_file": image_filename
                 })

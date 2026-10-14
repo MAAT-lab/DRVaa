@@ -13,8 +13,7 @@ df = pd.read_csv(csv_file)
 
 # Initialize new sensory columns PLUS the rationale
 metrics = [
-    "acoustic_comfort", "thermal_comfort", "somatic_stress", 
-    "social_vitality", "territorial_safety", "olfactory_resonance", "rationale"
+    "acoustic", "thermal", "stress", "social", "territorial", "olfactory", "rationale"
 ]
 for metric in metrics:
     df[metric] = None
@@ -33,7 +32,7 @@ Use this exact structure, providing an integer score from 0 to 100 for each:
   "social_vitality": 0,
   "territorial_safety": 0,
   "olfactory_resonance": 0,
-  "rationale": "Provide a concise justification for the scores, highlighting key environmental cues observed in the panorama."
+  "rationale": "Provide a concise justification for each of the scores, highlighting key environmental cues observed in the panorama."
 }
 """
 
