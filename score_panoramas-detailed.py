@@ -8,18 +8,18 @@ import ollama
 start_time = time.time()
 
 # Load existing metadata
-csv_file = "street_segments_metadata.csv"
+csv_file = "street_segments_metadata_360.csv"
 df = pd.read_csv(csv_file)
 
-# Initialize new sensory columns
+# Initialize new sensory columns PLUS the rationale
 metrics = [
     "acoustic_comfort", "thermal_comfort", "somatic_stress", 
-    "social_vitality", "territorial_safety", "olfactory_resonance"
+    "social_vitality", "territorial_safety", "olfactory_resonance", "rationale"
 ]
 for metric in metrics:
     df[metric] = None
 
-image_dir = "./streetview_panoramas"
+image_dir = "./streetview_panoramas_360"
 
 # Define exact instructions for Qwen2.5-VL to ensure structured JSON output
 system_prompt = """
@@ -78,7 +78,7 @@ for index, row in df.iterrows():
     except Exception as e:
         print(f"Error analyzing {image_filename}: {e}\nRaw output: {output_text if 'output_text' in locals() else 'None'}")
 
-output_csv = "street_segments_scored.csv"
+output_csv = "street_segments_scored_360.csv"
 df.to_csv(output_csv, index=False)
 print(f"\nScoring complete! Data saved to {output_csv}")
 
