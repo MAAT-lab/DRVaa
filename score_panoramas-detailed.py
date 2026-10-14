@@ -39,7 +39,8 @@ Use this exact structure, providing an integer score from 0 to 100 for each:
 
 print("Starting local LLM analysis via Ollama (Qwen2.5-VL)...")
 
-for index, row in df.iterrows():
+# for index, row in df.iloc[:10].iterrows(): # Testing only first 10 images
+for index, row in df.iterrows(): # Full run with all images
     image_filename = row['image_file']
     if pd.isna(image_filename):
         continue

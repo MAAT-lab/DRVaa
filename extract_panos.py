@@ -36,7 +36,8 @@ records = []
 # Angles to cover 360 degrees (North, East, South, West)
 headings = [0, 90, 180, 270]
 
-for idx, row in edges.iterrows():
+# for idx, row in edges.iloc[:10].iterrows():  # Testing only first 10 edges
+for idx, row in edges.iterrows(): # Full run with all edges
     segment_id = f"{idx[0]}_{idx[1]}_{idx[2]}" if isinstance(idx, tuple) else str(idx)
     
     street_name = row.get('name', 'Unnamed Street')
