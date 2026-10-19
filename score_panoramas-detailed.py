@@ -29,7 +29,7 @@ image_dir = "./streetview_panoramas_360"
 # Updated system prompt using exact matching JSON keys
 system_prompt = """
 You are an expert urban psychologist, spatial analyst, and pedestrian. Analyze the provided 360-degree street panorama and evaluate it across six affective dimensions: acoustic (acoustic comfort), thermal (thermal comfort), stress (somatic stress and stress-inducing factors), social (social vitality and engagement), safety (perceived territorial safety and security), and olfactory (olfactory resonance).
-For acoustic comfort consider possitive and negative sound sources, such as traffic noise, construction, or natural sounds. For thermal comfort, consider shade, sun exposure, and wind. For stress, consider visual clutter, traffic density, and environmental stressors. For social vitality, consider the presence of people, social interactions, and community engagement. For safety, consider lighting, visibility, and signs of crime or neglect and avoiding highways as they are high-risk areas for pedestrian accidents. For olfactory resonance, consider the presence of pleasant or unpleasant odors.
+For acoustic comfort consider possitive and negative sound sources, such as traffic noise, activities that involve high levels of noise, construction, or natural sounds. For thermal comfort, consider shade, shading devices on buildings, tree canopies, and materials. For stress, consider visual clutter, traffic density, and environmental stressors. For social vitality, consider the presence of people, social interactions, active facades, and community engagement. For safety, consider lighting, street lamps, transparent facades, visibility, active facades, street activity, as well as signs of crime or neglect while avoiding highways and traffic as they are high-risk areas for pedestrian accidents. For olfactory resonance, consider the presence of pleasant or unpleasant odors.
 Output ONLY a raw JSON object with no markdown formatting, no backticks, and no conversational text. Justify your scores with a very brief rationale in a separate field.
 Use this exact structure, providing an integer score from 0 to 100 for each:
 {
@@ -89,7 +89,7 @@ for index, row in df.iterrows(): # Full run with all images
         )
 
 # Save output
-output_csv = "street_segments_scored_360_rationale.csv"
+output_csv = "street_segments_scored_360_rationale2.csv"
 df.to_csv(output_csv, index=False)
 print(f"\nScoring complete! Data saved to {output_csv}")
 
