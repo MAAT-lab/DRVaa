@@ -1,6 +1,6 @@
-# DRVaa
+# DRVA/A
 
-## Affective-Atmospheric Vectorial Drift and Resonance (DRVaa)
+## Affective-Atmospheric Vectorial Drift and Resonance (DRVA/A)
 ### Intelligent Computational System for Atmospheric Perception and Multi-Sensory Navigation
 
 Traditional cartography operates under a paradigm of spatial positivism that optimizes routes for functional efficiency, ignoring the city's affective reality: the precognitive emotional resonances, sensory atmospheres, and somatic micro-experiences that define human territoriality. DRVA recovers the Situationist gesture of the dérive—displacement guided by the psychic attraction of the territory, rather than the destination—and formalizes it as a computational device capable of translating qualitative urban atmospheres into navigable graph structures using Multimodal Large Language Models (MLLMs) as proxy sensors.
