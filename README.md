@@ -50,5 +50,5 @@ Within a terminal, download and install Ollama (ollama.com).
 3. Explore and analyze scores and routes.
 
 ## Other references
-For panorama images used in this project look at the following Google Drive folder: [Google Drive](https://drive.google.com/drive/folders/1wttdINTRLIfu8ZmhVUkJXwbi5vvZSSYV?usp=sharing)
+For panorama images used in this project look at the following [Google Drive folder](https://drive.google.com/drive/folders/1wttdINTRLIfu8ZmhVUkJXwbi5vvZSSYV?usp=sharing).
 
