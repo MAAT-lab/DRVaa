@@ -39,10 +39,10 @@ Within a terminal, download and install [Ollama](ollama.com).
 
 ### Panorama scoring through LLM vision model
 1. Open the `score_panoramas.py` file.
-2. Make sure you point to CSV file (`street_segments_metadata_360.csv`) and panorama folder (`./streetview_panoramas_360`).
-3. Select vision model (in this case, `qwen2.5vl` was used through Ollama as indicated before.
+2. Make sure you point to CSV file `street_segments_metadata_360.csv` and panorama folder `./streetview_panoramas_360`.
+3. Select vision model. In this study, `qwen2.5vl` was used through Ollama as indicated before.
 4. Run PY file.
-   - A CSV file will be created adding LLM scores and rationale for each panoramic image: `street_segments_scored_360_rationale2.csv`
+   - A CSV file will be created, adding LLM scores and rationale for each panoramic image: `street_segments_scored_360_rationale2.csv`
 
 ### Simulation run
 1. Open the Grasshopper simulation `DRVaa.gh` file (either version available)
