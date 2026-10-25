@@ -18,7 +18,7 @@ Within a terminal, do the following
 
 
 ### Setting up the Vision LLM Model
-Within a terminal, download and install Ollama (ollama.com).
+Within a terminal, download and install [Ollama](ollama.com).
 1. Install the Python bindings for Ollama:
    `pip install ollama`
 2. Download the model:
@@ -31,7 +31,7 @@ Within a terminal, download and install Ollama (ollama.com).
 ### Panorama (or image) extraction from Google Street View
 1. Get key from Google Street View Static API within Google Cloud
 2. Insert key inside `extract_panos.py`
-3. Select an area to analyze from OpenStreetMap and download as OSM file
+3. Select an area to analyze from [OpenStreetMap](https://www.openstreetmap.org/export) and download as OSM file
 4. Reference the downloaded OSM within `extract_panos.py`
 5. Run the PY file.
    - A folder will be created where all panoramic images will be saved: `./streetview_panoramas_360`.
