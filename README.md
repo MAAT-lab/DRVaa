@@ -49,4 +49,6 @@ Within a terminal, download and install Ollama (ollama.com).
 2. Point to OSM file and latest CSV file (`street_segments_scored_360_rationale2.csv`).
 3. Explore and analyze scores and routes.
 
+## Other references
+For panorama images used in this project look at the following Google Drive folder: 
 
