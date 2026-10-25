@@ -33,18 +33,19 @@ Within a terminal, download and install Ollama (ollama.com).
 3. Select an area to analyze from OpenStreetMap and download as OSM file
 4. Reference the downloaded OSM within ```extract_panos.py```
 5. Run the PY file.
-   - A folder will be created where all panoramic images will be saved.
-   - A CSV file will also be created where all data, like street segment ID, latitude, longitude, street name, and image file will be recorded
+   - A folder will be created where all panoramic images will be saved: `./streetview_panoramas_360`.
+   - A CSV file will also be created where all data, like street segment ID, latitude, longitude, street name, and image file will be recorded: `street_segments_metadata_360.csv`.
 
 ## Panorama scoring through LLM vision model
-1. Open the ```score_panoramas.py file.
-2. Make sure you point to CSV file and panorama folder
-3. Select vision model (in this case, `qwen2.5vl` was used through Ollama
-4. Run the PY file.
-   - A CSV file will be created adding LLM scores and rationale for each panoramic image
+1. Open the ```score_panoramas.py``` file.
+2. Make sure you point to CSV file (`street_segments_metadata_360.csv`) and panorama folder (`./streetview_panoramas_360`).
+3. Select vision model (in this case, `qwen2.5vl` was used through Ollama as indicated before.
+4. Run PY file.
+   - A CSV file will be created adding LLM scores and rationale for each panoramic image: `street_segments_scored_360_rationale2.csv`
 
 ## Simulation run
 1. Open the Grasshopper simulation `DRVaa.gh` file
-2. Point to OSM file and latest CSV file that contains the LLM scores and rationale.
+2. Point to OSM file and latest CSV file (`street_segments_scored_360_rationale2.csv`).
+3. Explore and analyze scores and routes.
 
 
