@@ -11,28 +11,28 @@ The core contribution of DRVA/A is its critical challenge to purely geometric na
 
 ## Setup
 ### Setting up Python
-Within a terminal, do the following
-1. Create the environment: `python -m venv venv`
-2. Activate the project: `.\venv\Scripts\activate`
-3. Install dependencies: `pip install osmnx geopandas shapely streetview python-dotenv`
+Within a terminal, do the following:
+1. Create the environment: `python -m venv venv`.
+2. Activate the project: `.\venv\Scripts\activate`.
+3. Install dependencies: `pip install osmnx geopandas shapely streetview python-dotenv`.
 
 
 ### Setting up the Vision LLM Model
-Within a terminal, download and install [Ollama](ollama.com).
-1. Install the Python bindings for Ollama:
+Within a terminal, download, install [Ollama](ollama.com), and do the following:
+1. Install the Python bindings for Ollama
    `pip install ollama`
-2. Download the model:
+2. Download the model
    `ollama pull qwen2.5vl`
    *(Optional alternatives: `ollama pull llava` or `ollama pull llama3.2-vision`)*
-3. Run the analysis script:
+3. Run the analysis script
    `python score_panoramas.py`
 
 ## Simulation
 ### Panorama (or image) extraction from Google Street View
-1. Get key from Google Street View Static API within Google Cloud
-2. Insert key inside `extract_panos.py`
-3. Select an area to analyze from [OpenStreetMap](https://www.openstreetmap.org/export) and download as OSM file
-4. Reference the downloaded OSM within `extract_panos.py`
+1. Get key from Google Street View Static API within Google Cloud.
+2. Insert key inside `extract_panos.py`.
+3. Select an area to analyze from [OpenStreetMap](https://www.openstreetmap.org/export) and download as OSM file.
+4. Reference the downloaded OSM within `extract_panos.py`.
 5. Run the PY file.
    - A folder will be created where all panoramic images will be saved: `./streetview_panoramas_360`.
    - A CSV file will also be created where all data, like street segment ID, latitude, longitude, street name, and image file will be recorded: `street_segments_metadata_360.csv`.
@@ -42,11 +42,11 @@ Within a terminal, download and install [Ollama](ollama.com).
 2. Make sure you point to CSV file `street_segments_metadata_360.csv` and panorama folder `./streetview_panoramas_360`.
 3. Select vision model. In this study, `qwen2.5vl` was used through Ollama as indicated before.
 4. Run PY file.
-   - A CSV file will be created, adding LLM scores and rationale for each panoramic image: `street_segments_scored_360_rationale2.csv`
+   - A CSV file will be created, adding LLM scores and rationale for each panoramic image: `street_segments_scored_360_rationale2.csv`.
 
 ### Simulation run
-1. Open the Grasshopper simulation `DRVaa.gh` file (either version available)
-2. Point to OSM file and latest CSV file (`street_segments_scored_360_rationale2.csv`).
+1. Open the Grasshopper simulation `DRVaa.gh` file (either version available).
+2. Point to OSM file and latest CSV file: `street_segments_scored_360_rationale2.csv`.
 3. Explore and analyze scores and routes.
 
 ## Other references
